@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-chart',
+  templateUrl: './chart.component.html',
+  styleUrls: ['./chart.component.scss']
 })
-export class AppComponent {
+export class ChartComponent implements OnInit {
   datas = [1, 5, 20, 15, 30, 32, 45, 55, 66]
   chartLabelss = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 
@@ -22,25 +22,8 @@ company_id = ''
   }
   
 
-  async podmena () {
-    let value = Math.floor(Math.random() * (500 - 100 + 1 ) + 100)
-    this.datas.shift()
-    this.datas.push(value)
-    this.chartLabelss.shift()
-    this.chartLabelss.push('20')
-  }
-
-
-
-
   
 
-  // myFilter = (d: Date | null): boolean => {
-  //   const day = (d || new Date()).getDay();
-  //   // Prevent Saturday and Sunday from being selected.
-  //   return day !== 0 && day !== 6;
-
-  // }
 
   chartData = [
     {
@@ -67,9 +50,9 @@ company_id = ''
 
   ngOnInit(): void {
 
+ 
+}
 
-  }
-  
   array = [
     {
       "id": 7,
@@ -127,3 +110,4 @@ company_id = ''
     }
   ]
 }
+

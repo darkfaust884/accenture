@@ -1,0 +1,16 @@
+<div class="full-wrapper">
+
+  <h1 class="article-header-h1">Новостная лента</h1>
+   
+  <div class="inner-wrapper">
+       <div class="article-preview" *ngFor=" let item of array">
+         <h6 class="article-date">{{ item.time }}</h6>
+         <h3 class="article-h1"><a href="">{{ item.title }}</a></h3> 
+         <p class="article-p">{{ item.description }}</p> 
+         
+         <p class="article-link"><a href="">Подробнее &raquo;</a></p>
+         <div class="article-breaker"></div>
+       </div>
+   </div>
+   
+  </div>
